@@ -46,13 +46,13 @@ circle {
 }
 
 .node-label {
-  font: 12px sans-serif;
+  font: 11px sans-serif;
   pointer-events: none;
   text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff; 
 }
 
 .topic {
-  font: 12.5px sans-serif; 
+  font: 11.5px sans-serif; 
 }
 
 </style>
@@ -210,7 +210,7 @@ path = svg.selectAll("path")
 circle = svg.selectAll("circle")
     .data(force.nodes())
   .enter().append("circle")
-    .attr("r", 12)
+    .attr("r", 10)
     .call(force.drag);
 
 text = svg.selectAll(".node-label")
@@ -218,7 +218,7 @@ text = svg.selectAll(".node-label")
   .enter().append("text") 
     .attr('class', 'node-label') 
     .attr("x", 14)
-    .attr("y", ".31em")
+    .attr("y", ".29em")
     .text(function(d) { return d.name; });
 
 topictext = svg2.selectAll('.topic')
