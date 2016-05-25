@@ -1,0 +1,400 @@
+[
+    {
+    "id": "1",
+    "topic": "god;believe;power;higher;religious;faith;religion;church;atheist;jesus"
+    },
+    {
+    "id": "2",
+    "topic": "mental;health;disorder;bipolar;illness;symptoms;treatment;diagnosed;diagnosis;bpd"
+    },
+    {
+    "id": "3",
+    "topic": "lot;think;sounds;sure;pretty;definitely;going;helped;bit;kind"
+    },
+    {
+    "id": "4",
+    "topic": "remember;bad;things;thing;times;forget;memory;happened;memories;remind"
+    },
+    {
+    "id": "5",
+    "topic": "social;group;friends;find;meet;online;groups;support;join;meeting"
+    },
+    {
+    "id": "6",
+    "topic": "learn;step;learned;learning;steps;start;important;direction;taking;small"
+    },
+    {
+    "id": "7",
+    "topic": "believe;tell;trust;person;honest;say;truth;lie;true;telling"
+    },
+    {
+    "id": "8",
+    "topic": "suicide;want;kill;end;think;suicidal;option;worth;live;reason"
+    },
+    {
+    "id": "9",
+    "topic": "sit;minutes;sitting;walk;head;half;minute;front;straight;put"
+    },
+    {
+    "id": "10",
+    "topic": "wanted;wasn't;thought;felt;told;knew;tried;needed;gave;saw"
+    },
+    {
+    "id": "11",
+    "topic": "goal;term;set;goals;short;motivation;achieve;success;small;focus"
+    },
+    {
+    "id": "12",
+    "topic": "experience;reality;ego;sense;experiences;true;consciousness;nature;mind;understanding"
+    },
+    {
+    "id": "13",
+    "topic": "haven't;found;tried;pretty;able;actually;definitely;helped;bit;gotten"
+    },
+    {
+    "id": "14",
+    "topic": "girl;guy;guys;girls;women;date;woman;dating;gay;confidence"
+    },
+    {
+    "id": "15",
+    "topic": "words;kind;word;say;mind;experience;think;describe;speak;clear"
+    },
+    {
+    "id": "16",
+    "topic": "drinking;drink;sober;aa;alcohol;meetings;sobriety;meeting;drunk;alcoholic"
+    },
+    {
+    "id": "17",
+    "topic": "things;change;future;past;happen;move;moment;look;want;present"
+    },
+    {
+    "id": "18",
+    "topic": "feel;makes;feeling;feels;bit;sense;think;weird;guess;maybe"
+    },
+    {
+    "id": "19",
+    "topic": "deal;stress;lot;issues;big;easier;helped;dealing;helps;break"
+    },
+    {
+    "id": "20",
+    "topic": "thanks;thank;appreciate;sharing;advice;reply;definitely;words;wow;guess"
+    },
+    {
+    "id": "21",
+    "topic": "shit;fuck;fucking;ass;shitty;fucked;dude;bullshit;bitch;damn"
+    },
+    {
+    "id": "22",
+    "topic": "help;need;support;seek;professional;needs;helping;able;offer;resources"
+    },
+    {
+    "id": "23",
+    "topic": "days;week;weeks;couple;months;ago;month;times;hours;past"
+    },
+    {
+    "id": "24",
+    "topic": "things;find;enjoy;fun;interesting;comfort;finding;try;boring;hobbies"
+    },
+    {
+    "id": "25",
+    "topic": "ask;question;yes;answer;post;asking;questions;asked;comment;rules"
+    },
+    {
+    "id": "26",
+    "topic": "parents;kids;family;mom;dad;mother;child;father;kid;brother"
+    },
+    {
+    "id": "27",
+    "topic": "job;working;jobs;career;degree;field;skills;find;passion;business"
+    },
+    {
+    "id": "28",
+    "topic": "depression;feel;depressed;feeling;worse;sad;bad;makes;felt;happy"
+    },
+    {
+    "id": "29",
+    "topic": "mind;focus;body;attention;breath;deep;breathing;energy;notice;thoughts"
+    },
+    {
+    "id": "30",
+    "topic": "yeah;hate;funny;real;we're;laugh;pretty;cool;seriously;say"
+    },
+    {
+    "id": "31",
+    "topic": "think;understand;mean;say;trying;saying;isn't;wrong;explain;case"
+    },
+    {
+    "id": "32",
+    "topic": "weight;body;eating;eat;healthy;food;lose;diet;fat;exercise"
+    },
+    {
+    "id": "33",
+    "topic": "thought;longer;thinking;mind;happens;process;times;eventually;goes;period"
+    },
+    {
+    "id": "34",
+    "topic": "friends;friend;family;close;hang;friendship;talk;hanging;mine;real"
+    },
+    {
+    "id": "35",
+    "topic": "happy;pain;feel;happiness;makes;sad;love;hope;wish;suffering"
+    },
+    {
+    "id": "36",
+    "topic": "big;look;picture;small;looking;huge;top;looks;put;bigger"
+    },
+    {
+    "id": "37",
+    "topic": "talk;need;free;pm;feel;internet;hey;message;want;hug"
+    },
+    {
+    "id": "38",
+    "topic": "care;want;think;give;say;chance;sure;giving;wouldn't;thing"
+    },
+    {
+    "id": "39",
+    "topic": "amp;list;put;write;set;phone;clean;paper;app;room"
+    },
+    {
+    "id": "40",
+    "topic": "today;awesome;days;tomorrow;congrats;hit;amazing;proud;congratulations;luck"
+    },
+    {
+    "id": "41",
+    "topic": "quit;smoking;smoke;quitting;weed;nicotine;cigarettes;cold;cravings;smoked"
+    },
+    {
+    "id": "42",
+    "topic": "video;add;games;contact;action;text;automatically;article;questions;image"
+    },
+    {
+    "id": "43",
+    "topic": "therapy;therapist;help;seeing;medication;psychiatrist;helpful;recommend;doctor;appointment"
+    },
+    {
+    "id": "44",
+    "topic": "read;book;reading;write;writing;books;wrote;written;recommend;check"
+    },
+    {
+    "id": "45",
+    "topic": "pretty;actually;think;cut;thing;sure;seen;completely;guess;kind"
+    },
+    {
+    "id": "46",
+    "topic": "post;reddit;subreddit;posts;comment;comments;posted;thread;read;link"
+    },
+    {
+    "id": "47",
+    "topic": "control;choice;decision;making;choose;stop;decide;baby;decisions;choices"
+    },
+    {
+    "id": "48",
+    "topic": "water;coffee;drink;eat;food;tea;bottle;beer;glass;ice"
+    },
+    {
+    "id": "49",
+    "topic": "sex;women;sexual;abuse;rape;woman;op;male;porn;victim"
+    },
+    {
+    "id": "50",
+    "topic": "anxiety;panic;fear;anxious;attack;heart;attacks;symptoms;worry;calm"
+    },
+    {
+    "id": "51",
+    "topic": "dont;yeah;thats;gonna;lol;ive;kinda;gotta;wont;ill"
+    },
+    {
+    "id": "52",
+    "topic": "run;exercise;start;running;gym;working;walk;helps;getting;daily"
+    },
+    {
+    "id": "53",
+    "topic": "call;phone;number;called;boss;police;office;law;calling;calls"
+    },
+    {
+    "id": "54",
+    "topic": "drugs;addiction;drug;high;clean;withdrawal;recovery;alcohol;addict;addicted"
+    },
+    {
+    "id": "55",
+    "topic": "love;relationship;relationships;person;loved;girlfriend;partner;wife;loving;boyfriend"
+    },
+    {
+    "id": "56",
+    "topic": "stuff;getting;actually;things;lot;hard;working;trying;pretty;lazy"
+    },
+    {
+    "id": "57",
+    "topic": "situation;understand;fault;person;blame;similar;sorry;sounds;happened;guilt"
+    },
+    {
+    "id": "58",
+    "topic": "pay;money;insurance;free;health;cost;paying;paid;job;expensive"
+    },
+    {
+    "id": "59",
+    "topic": "white;black;country;culture;society;american;english;language;war;race"
+    },
+    {
+    "id": "60",
+    "topic": "test;information;case;sure;course;likely;results;due;general;history"
+    },
+    {
+    "id": "61",
+    "topic": "say;mean;think;saying;wrong;op;stupid;isn't;sound;aren't"
+    },
+    {
+    "id": "62",
+    "topic": "going;thing;stop;hard;fight;happen;worst;what's;fighting;worth"
+    },
+    {
+    "id": "63",
+    "topic": "school;college;high;class;classes;university;study;student;grades;semester"
+    },
+    {
+    "id": "64",
+    "topic": "music;listen;listening;voice;head;song;love;helps;art;sound"
+    },
+    {
+    "id": "65",
+    "topic": "adhd;brain;research;studies;study;dopamine;interesting;evidence;symptoms;chemical"
+    },
+    {
+    "id": "66",
+    "topic": "sick;bad;cancer;news;sure;disease;getting;fine;pretty;yes"
+    },
+    {
+    "id": "67",
+    "topic": "problem;problems;help;need;fix;find;issues;things;solution;issue"
+    },
+    {
+    "id": "68",
+    "topic": "feel;feeling;angry;anger;bad;makes;upset;things;physically;feels"
+    },
+    {
+    "id": "69",
+    "topic": "watch;play;game;watching;show;playing;movie;tv;fun;movies"
+    },
+    {
+    "id": "70",
+    "topic": "talking;say;talk;person;conversation;think;comfortable;feel;speak;uncomfortable"
+    },
+    {
+    "id": "71",
+    "topic": "maybe;try;find;give;help;advice;luck;need;sounds;shot"
+    },
+    {
+    "id": "72",
+    "topic": "hope;sorry;hear;luck;wish;glad;sounds;soon;helps;hopefully"
+    },
+    {
+    "id": "73",
+    "topic": "think;point;thing;idea;important;reason;course;actually;isn't;thinking"
+    },
+    {
+    "id": "74",
+    "topic": "want;tell;need;talk;give;ask;help;advice;going;try"
+    },
+    {
+    "id": "75",
+    "topic": "meds;doctor;medication;side;effects;taking;anti;mood;medications;effect"
+    },
+    {
+    "id": "76",
+    "topic": "start;going;plan;getting;wait;need;ready;stop;soon;later"
+    },
+    {
+    "id": "77",
+    "topic": "strong;stay;look;find;hope;forward;light;strength;looking;dark"
+    },
+    {
+    "id": "78",
+    "topic": "dog;cat;walk;animals;dogs;animal;sun;fire;pet;cats"
+    },
+    {
+    "id": "79",
+    "topic": "person;wants;needs;respect;deserve;leave;treat;knows;guy;says"
+    },
+    {
+    "id": "80",
+    "topic": "meditation;practice;mind;meditate;mindfulness;meditating;yoga;awareness;concentration;experience"
+    },
+    {
+    "id": "81",
+    "topic": "normal;brain;experience;tend;common;able;part;completely;generally;level"
+    },
+    {
+    "id": "82",
+    "topic": "human;live;lives;living;we're;matter;purpose;meaning;worth;person"
+    },
+    {
+    "id": "83",
+    "topic": "person;think;accept;fact;opinion;matter;perfect;isn't;aren't;judge"
+    },
+    {
+    "id": "84",
+    "topic": "sleep;night;bed;morning;hours;wake;dreams;tired;sleeping;fall"
+    },
+    {
+    "id": "85",
+    "topic": "gt;yes;actually;quote;edit;true;agree;win;point;says"
+    },
+    {
+    "id": "86",
+    "topic": "part;desire;natural;simply;ability;sense;ways;lack;level;fact"
+    },
+    {
+    "id": "87",
+    "topic": "started;months;felt;ago;took;stopped;finally;wasn't;found;decided"
+    },
+    {
+    "id": "88",
+    "topic": "face;look;eyes;head;eye;hand;open;skin;hair;hands"
+    },
+    {
+    "id": "89",
+    "topic": "point;behavior;based;argument;actions;opinion;view;simply;fact;agree"
+    },
+    {
+    "id": "90",
+    "topic": "taking;adderall;dose;doctor;meds;effects;medication;side;effect;blood"
+    },
+    {
+    "id": "91",
+    "topic": "tell;told;telling;okay;hurt;friend;scared;boyfriend;afraid;happened"
+    },
+    {
+    "id": "92",
+    "topic": "end;lost;death;live;anymore;want;dead;miss;left;hate"
+    },
+    {
+    "id": "93",
+    "topic": "money;live;spend;place;living;buy;save;spent;worth;saved"
+    },
+    {
+    "id": "94",
+    "topic": "hard;try;trying;things;easy;failure;harder;easier;fail;thing"
+    },
+    {
+    "id": "95",
+    "topic": "feelings;feel;feeling;emotions;emotional;understand;experience;things;able;fear"
+    },
+    {
+    "id": "96",
+    "topic": "need;place;help;going;hospital;safe;sure;put;able;harm"
+    },
+    {
+    "id": "97",
+    "topic": "car;drive;driving;birthday;hit;left;home;road;took;later"
+    },
+    {
+    "id": "98",
+    "topic": "thoughts;thinking;thought;positive;mind;think;negative;things;try;stop"
+    },
+    {
+    "id": "99",
+    "topic": "want;feel;think;ok;going;fine;bad;thing;crazy;say"
+    },
+{ "id": "100",
+"topic": "home;going;leave;room;night;weekend;place;moved;week;move" }
+]
