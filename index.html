@@ -40,13 +40,13 @@ circle {
 }
 
 .link-label {
-      font: 11px sans-serif; 
+      font: 10px sans-serif; 
       pointer-events: none;
       /*text-shadow: 0 .5px 0 #fff, .5px 0 0 #fff, 0 -.5px 0 #fff, -.5px 0 0 #fff;*/
 }
 
 .node-label {
-  font: 11px sans-serif;
+  font: 10px sans-serif;
   pointer-events: none;
   text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff; 
 }
@@ -99,14 +99,14 @@ function pairwise(list) {
 
 
 
-var width = 700,
+var width = 750,
     height = 700,
     width2 =500, 
     height2 = 700; 
 
 var force = d3.layout.force()
     .size([width, height])
-    .linkDistance(100)
+    .linkDistance(80)
     .charge(-300)
     .on("tick", tick); 
 
@@ -222,7 +222,7 @@ path = svg.selectAll("path")
 circle = svg.selectAll("circle")
     .data(force.nodes())
   .enter().append("circle")
-    .attr("r", 10)
+    .attr("r", 8)
     .call(force.drag);
 
 text = svg.selectAll(".node-label")
@@ -241,7 +241,7 @@ topictext = svg2.selectAll('.topic')
 	.attr('y', ".35em")
 	.text(function(d) { return 'Topic ' + d.id + ': ' +  d.topic; }) 
 	.attr('transform', function(d) {
-		return 'translate( 0, ' + (8 + +d.order)*16 + ')'; 
+		return 'translate( 0, ' + (4 + +d.order)*16 + ')'; 
 	});
 
 };
