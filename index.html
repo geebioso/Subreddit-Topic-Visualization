@@ -69,6 +69,18 @@ circle {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script>
 
+var DSM = 1; 
+
+if( DSM ){
+	var SPfilename = 'SPDSM.csv',
+	    SRfilename = 'subredditDSM.json',
+   	    Tfilename = 'topicsDSM.json';
+} else {
+	var SPfilename = 'SP.csv',
+	    SRfilename = 'subreddits.json',
+   	    Tfilename = 'topics.json';
+} 
+
 function pairwise(list) {
   var pairs = [];
   list
@@ -299,9 +311,9 @@ function transform(d) {
 var p = 0.06; 
 
 var SP = [];
-d3.json('subreddits.json', function (e, subreddits) {
-   d3.json('topics.json', function (e, topics) {
-	d3.csv('SP.csv', function(data){ 
+d3.json(SRfilename, function (e, subreddits) {
+   d3.json( Tfilename, function (e, topics) {
+	d3.csv(SPfilename, function(data){ 
 		SP = data.map( function(d) { 
 			line = []; 
  			for( i = 0; i < 100; i++){
