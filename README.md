@@ -1,13 +1,16 @@
 # Subreddit-Topic-Visualization
 
 ## Synopsis 
-This code repository generates a d3 graph with meantal health subreddits as nodes and links as topics that are shared between subreddits. I used an unsupervised topic model to generate a set of 100 topics and computed which topics were likely to be expressed in each subreddit. Links represent topics that are likely to be expressed in two subreddits. 
+This code repository generates a d3 graph with mental health subreddits and shared topics as where a link between a subreddit and topic represents high expression of the topic in that subreddit. In this visualization, only topics that are shared between topics are visualized. 
+
+The data used to plot the graph was generated using an unsupervised topic model (Latent Dirichlet Allocation). I generated a set of 100 topics using ~6 million comments from mental health subreddits and computed which topics were likely to be expressed in each subreddit. 
 
 ## Running the code
 
-cd into the repository
 
-start a localhost server using the command : python -m SimpleHTTPServer
+start a localhost server using the command  
+```python -m SimpleHTTPServer```
 
-then run the file graphtest2.html in you browser by entering the url http://localhost8000/graphtest2.html
+then run the file bipartite_graph.html in you browser by entering the url 
+```http://localhost8000/graphtest2.html```
   
