@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+
+.containerl{
+	float: left; 
+}
+
+.containerr{
+	float: left; 
+}
+
+.link {
+  fill: none;
+  /*stroke: #666;*/
+  opacity: 0.5; 
+  stroke: #1f77b4; 
+  stroke-width: 1.5px;
+}
+
+#licensing {
+  fill: green;
+}
+
+.link.licensing {
+  stroke: green;
+}
+
+.link.resolved {
+  stroke-dasharray: 0,2 1;
+}
+
+.sub {
+  /*fill: #ccc; */
+  opacity: 1; 
+  fill: #d62728;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+.top {
+  /*fill: #ccc; */
+  opacity: 1; 
+  fill: #1f77b4;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+.node-label {
+  font: 12px sans-serif;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff; 
+}
+
+.topic {
+  font: 12.5px sans-serif; 
+}
+
+</style>
+<body>
+
+<h1 font-family="sans-serif" > Topics Commonly Expressed in Different Subreddits </h1>
+
+<div class="containerl" id="chart1">
+</div>
+<div class="containerr" id="chart2">
+</div>
+
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+
+var width = 800,
+    height = 650,
+    width2 = 500, 
+    height2 = 650; 
+
+var force = d3.layout.force()
+    .size([width, height])
+    .linkDistance(60)
+    .charge(-300)
+    .on("tick", tick); 
+
+    //.nodes(d3.values(nodes))
+    //.links(links)
+    //.start();
+
+var svg = d3.select("#chart1").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var svg2 = d3.select('#chart2').append('svg')
+	.attr('width', width2)
+   	.attr('height', height2); 
+
+
+var path, circle, text, topictext; 
+
+function makeGraph( subreddits, topics, SP, p) {
+
+// get which links will be turned on 
+var edges = [];
+for( i = 0; i < SP.length; i++){
+	edges.push([]); 
+	for( j = 0; j < SP[0].length; j++){
+		edges[i].push( SP[i][j] > p); 
+	}
+} 
+// update links with source, target, topic, and id
+// update topics that will be considered on 
+var links = []; 
+var ontopics = []; 
+var numLinks = 0; 
+for( j = 0; j < edges[0].length; j++){
+	col = edges.map( function(value, index) { return value[j];});
+	colsum = col.reduce(function(a,b){return a + b;});
+	if( colsum > 1){
+		for( i = 0; i < col.length; i++){
+			if( col[i]  == 1){ 
+				var obj = {}; 
+				obj.source = subreddits[i].name;
+				obj.sclass = 'sub';
+				obj.target = 'T' + j;
+				obj.tclass = 'top';
+				obj.topic = j;
+				obj.id = numLinks;
+				links.push(obj)
+				numLinks++;
+				ontopics.push(j-1); 
+			}
+		}
+	}
+}
+
+console.log(col)
+
+// update topics to turn on or off 
+var topics2 = []; 
+var present = 0; 
+var numincluded = 0; 
+for( i = 0; i < topics.length; i++){
+	present = 0; 
+	for( j = 0; j < ontopics.length; j++){
+		if( ontopics[j] == i) { present = 1;} 
+	}
+	if( present ){ 
+		var obj = topics[i];
+ 		obj.order = numincluded; 
+		topics2.push( obj ); 
+		numincluded++; 
+	}
+}
+
+//sort links by source, then target
+links.sort(function(a,b) {
+    if (a.source > b.source) {return 1;}
+    else if (a.source < b.source) {return -1;}
+    else {
+        if (a.target > b.target) {return 1;}
+        if (a.target < b.target) {return -1;}
+        else {return 0;}
+    }
+}); 
+
+//any links with duplicate source and target get an incremented 'linknum'
+for (var i=0; i<links.length; i++) {
+    if (i != 0 &&
+        links[i].source == links[i-1].source &&
+        links[i].target == links[i-1].target) {
+            links[i].linknum = links[i-1].linknum + 1;
+        }
+    else {links[i].linknum = 1;};
+};
+
+var nodes = {};
+// Compute the distinct nodes from the links.
+links.forEach(function(link) {
+  link.source = nodes[link.source] || (nodes[link.source] = {name: link.source, class: link.sclass});
+  link.target = nodes[link.target] || (nodes[link.target] = {name: link.target, class: link.tclass}); 
+});
+
+ 
+force.nodes(d3.values(nodes))
+     .links(links)
+     .start(); 
+
+// make the graph 
+path = svg.selectAll("path")
+    .data(force.links())
+  .enter().append("path")
+    .attr("class", 'link') 
+    .attr("id", function(d) {
+	return d.id; 
+    }); 
+
+//top_circle = svg.selectAll(".top")
+//    .data(force.nodes())
+//  .enter().append("circle")
+//    .attr("class", "top")
+//    .attr("r", 12)
+//    .call(force.drag);
+
+circle = svg.selectAll("circle")
+    .data(force.nodes())
+  .enter().append("circle")
+    .attr("class",function(d) {
+	return d.class;
+    }) 
+    .attr("r", 12)
+    .call(force.drag);
+
+text = svg.selectAll(".node-label")
+    .data(force.nodes())
+  .enter().append("text") 
+    .attr('class', 'node-label') 
+    .attr("x", 14)
+    .attr("y", ".31em")
+    .text(function(d) { return d.name; });
+
+topictext = svg2.selectAll('.topic')
+	.data(topics2)
+      .enter().append('text')
+	.attr('class', 'topic')
+        .attr('x', 0) 
+	.attr('y', ".35em")
+	.text(function(d) { return 'Topic ' + d.id + ': ' +  d.topic; }) 
+	.attr('transform', function(d) {
+		return 'translate( 0, ' + (6 + +d.order)*16 + ')'; 
+	});
+
+};
+
+function tick() {
+  
+  path.attr("d", linkArc);
+  circle.attr("transform", transform);
+  //top_circle.attr("transform", transform);
+  text.attr("transform", transform);
+
+}
+
+function linkArc(d) {
+  if (d.source.x < d.target.x){
+	var startx = d.source.x, 
+ 	    endx = d.target.x, 
+    	    starty = d.source.y,
+	    endy = d.target.y, 
+	    sweepflag =1 ; 
+
+  } else {
+	var startx = d.target.x, 
+	    endx = d.source.x, 
+            starty = d.target.y, 
+            endy = d.source.y, 
+	    sweepflag = 0;  
+  }
+
+  	var dx = endx - startx,
+  	    dy = endy - starty,
+  	    dr = Math.sqrt(dx * dx + dy * dy);
+	    dr = dr/d.linknum; 
+//  return "M" + startx + "," + starty + "A" + dr + "," + dr + " 0 0," + sweepflag + " " + endx + "," + endy;
+  return "M" + startx + "," + starty + "L" + endx + "," + endy;
+}
+
+function transform(d) {
+  return "translate(" + d.x + "," + d.y + ")";
+}
+
+var p = 0.06; 
+
+var SP = [];
+d3.json('subreddits.json', function (e, subreddits) {
+   subreddits.forEach( function(sub){
+	sub.class = 'sub';
+   });
+   d3.json('topics.json', function (e, topics) {
+	d3.csv('SP.csv', function(data){ 
+		SP = data.map( function(d) { 
+			line = []; 
+ 			for( i = 0; i < 100; i++){
+				line.push( +d[i] )
+			}
+			return line; 
+			//return [ +d['x'], +d['y']]
+		});
+		makeGraph(subreddits, topics, SP, p); 
+	});
+   });
+});
+
+//var SP = [ [ 0.3, 0.7], [ 0.1, 0.9], [ 0.8, 0.2]]; 
+ 
+
+
+
+</script>
+</body>
+</html> 
