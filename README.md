@@ -9,6 +9,8 @@ The data used to plot the graph was generated using an unsupervised topic model 
 
 Start a localhost server using the command `python -m SimpleHTTPServer`
 
-Then run the file bipartite_graph.html in you browser by entering the url `http://localhost8000/graphtest2.html`
+For a visualization with labeled links run the file graphtest2.html in your browser by entering the url `http://localhost8000/graphtest2.html`
 
-The visualization can also be found on [github pages](http://geebioso.github.io/Subreddit-Topic-Visualization/)
+For a bipartite graph visualization, run the file bipartite_graph.html in you browser by entering the url `http://localhost8000/bipartite_graph.html`
+
+The labeled link visualization can also be found on [github pages](http://geebioso.github.io/Subreddit-Topic-Visualization/)
