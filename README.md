@@ -5,10 +5,10 @@ This code repository generates a d3 graph with mental health subreddits and shar
 
 The data used to plot the graph was generated using an unsupervised topic model (Latent Dirichlet Allocation). I generated a set of 100 topics using ~6 million comments from mental health subreddits and computed which topics were likely to be expressed in each subreddit. 
 
-## Running the code
+## Running the Visualization
 
+Start a localhost server using the command `python -m SimpleHTTPServer`
 
-start a localhost server using the command `python -m SimpleHTTPServer`
+Then run the file bipartite_graph.html in you browser by entering the url `http://localhost8000/graphtest2.html`
 
-then run the file bipartite_graph.html in you browser by entering the url `http://localhost8000/graphtest2.html`
-  
+The visualization can also be found on [github pages](http://geebioso.github.io/Subreddit-Topic-Visualization/)
