@@ -8,9 +8,7 @@ The data used to plot the graph was generated using an unsupervised topic model 
 ## Running the code
 
 
-start a localhost server using the command  
-```python -m SimpleHTTPServer```
+start a localhost server using the command `python -m SimpleHTTPServer`
 
-then run the file bipartite_graph.html in you browser by entering the url 
-```http://localhost8000/graphtest2.html```
+then run the file bipartite_graph.html in you browser by entering the url `http://localhost8000/graphtest2.html'
   
